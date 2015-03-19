@@ -1,5 +1,6 @@
 #lang racket
 
-(require mishcief)
+(require mischief)
 
-(require/provide "command-line.rkt")
+(require/provide "extensible-command-line-ext-syntax.rkt"
+                 "library-expanders.rkt")
