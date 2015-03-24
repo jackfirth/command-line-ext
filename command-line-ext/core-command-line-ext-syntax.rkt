@@ -30,7 +30,16 @@
            (syntax->list #'(keyword spec.base-form ... ...))))
 
 
+(define-splicing-syntax-class flag-clauses-ext
+  #:attributes ((base-form 1))
+  (pattern (~seq clause:flag-clause-ext ...)
+           #:attr (base-form 1)
+           (syntax->list #'(clause.base-form ... ...))))
+
+
 (define command-line-ext-base
   (syntax-parser
-    [(_ flag-clause:flag-clause-ext ... other-clause ...)
-     #'(command-line flag-clause.base-form ... ... other-clause ...)]))
+    [(_ #:program name flag-clauses:flag-clauses-ext other-clause ...)
+     #'(command-line #:program name flag-clauses.base-form ... other-clause ...)]
+    [(_ flag-clauses:flag-clauses-ext other-clause ...)
+     #'(command-line flag-clauses.base-form ... other-clause ...)]))

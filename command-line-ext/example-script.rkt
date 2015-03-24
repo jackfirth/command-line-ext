@@ -20,6 +20,7 @@
 
 
 (command-line-ext
+ #:program "example-script"
  #:once-each
  (toggle-params
   (pears ("-p" "--pears") "Toggles pears")
