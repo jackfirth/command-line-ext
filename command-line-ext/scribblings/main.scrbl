@@ -5,7 +5,7 @@
                      racket/base))
 
 @(define the-eval (make-base-eval))
-@(the-eval '(require "main.rkt"))
+@(the-eval '(require "../main.rkt"))
 
 @title{Extensible Command Line}
 
