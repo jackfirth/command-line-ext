@@ -21,3 +21,15 @@
   created with @racket[define-command-line-flag-expander] can
   expand to multiple flag clauses by using @racket[begin-flags].
 }
+
+
+@defform[(define-command-line-flag-expander id transformer-expr)]{
+  Binds @racket[id] as a @italic{command line flag expander}. When
+  @racket[(id expr ...)] appears as a @racket[flag-clause] in
+  @racket[command-line-ext], a syntax object representing
+  @racket[(id expr ...)] is passed to @racket[transformer-expr],
+  which must be an expression that evaluates to a procedure of
+  one argument at phase 1. Whatever syntax object @racket[transformer-expr]
+  returns is then used in place of @racket[(id expr ...)] as a
+  @racket[flag-spec].
+}
