@@ -13,4 +13,5 @@
   '("cover"
     "scribble-lib"
     "rackunit-lib"
+    "package-scribblings-tools"
     "racket-doc"))
