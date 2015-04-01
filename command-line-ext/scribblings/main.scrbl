@@ -1,7 +1,6 @@
 #lang scribble/manual
 
-@(require scribble/eval
-          package-scribblings-tools
+@(require package-scribblings-tools
           (for-label command-line-ext
                      racket/cmdline
                      racket/base))
