@@ -7,7 +7,8 @@
     "rackunit-lib"
     "fancy-app"
     "generic-syntax-expanders"
-    "mischief"))
+    "mischief"
+    "lenses"))
 
 (define build-deps
   '("cover"
