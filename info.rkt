@@ -8,7 +8,7 @@
     "fancy-app"
     "generic-syntax-expanders"
     "mischief"
-    "lenses"))
+    "lens"))
 
 (define build-deps
   '("cover"

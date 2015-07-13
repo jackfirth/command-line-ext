@@ -2,7 +2,7 @@
 
 (require generic-syntax-expanders
          (for-syntax "core-command-line-ext-syntax.rkt"
-                     lenses
+                     unstable/lens
                      generic-syntax-expanders/scoped-transformers))
 
 (provide command-line-ext
@@ -34,7 +34,7 @@
       (with-scoped-pre-transformer command-line-ext-base
                                    once-each-lens
                                    expand-all-command-line-flag-expanders))
-    (define with-once-any-flags 
+    (define with-once-any-flags
       (with-scoped-pre-transformer with-once-each-flags
                                    once-any-lens
                                    expand-all-command-line-flag-expanders))
@@ -47,4 +47,3 @@
                                    final-lens
                                    expand-all-command-line-flag-expanders))
     with-final-flags))
-  
