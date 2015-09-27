@@ -15,3 +15,5 @@ comes batteries-included with many pre-defined expanders for commmon
 patterns such as switches that toggle boolean parameters.
 
 @source-code{https://github.com/jackfirth/command-line-ext}
+
+@include-section["core-form.scrbl"]
