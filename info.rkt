@@ -12,6 +12,7 @@
 
 (define build-deps
   '("cover"
+    "cover-coveralls"
     "scribble-lib"
     "rackunit-lib"
     "package-scribblings-tools"
