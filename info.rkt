@@ -7,7 +7,7 @@
     "rackunit-lib"
     "fancy-app"
     "generic-syntax-expanders"
-    "mischief"
+    "reprovide-lang"
     "lens"))
 
 (define build-deps
