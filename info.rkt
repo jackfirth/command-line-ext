@@ -15,5 +15,5 @@
     "cover-coveralls"
     "scribble-lib"
     "rackunit-lib"
-    "package-scribblings-tools"
+    "git://github.com/jackfirth/package-scribblings-tools"
     "racket-doc"))
