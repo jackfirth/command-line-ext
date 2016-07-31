@@ -3,11 +3,10 @@
 (require generic-syntax-expanders
          (for-syntax "core-command-line-ext-syntax.rkt"
                      unstable/lens
-                     generic-syntax-expanders/scoped-transformers))
+                     generic-syntax-expanders))
 
 (provide command-line-ext
          define-command-line-flag-expander)
-
 
 
 (define-expander-type command-line-flag)

@@ -1,7 +1,6 @@
 #lang info
-
-(define collection 'multi)
-
+(define collection "command-line-ext")
+(define scribblings '(("main.scrbl" () (library) "command-line-ext")))
 (define deps
   '("base"
     "rackunit-lib"
@@ -9,11 +8,13 @@
     "generic-syntax-expanders"
     "reprovide-lang"
     "lens"))
-
 (define build-deps
-  '("cover"
-    "cover-coveralls"
-    "scribble-lib"
+  '("scribble-lib"
     "rackunit-lib"
-    "git://github.com/jackfirth/package-scribblings-tools"
     "racket-doc"))
+(define compile-omit-paths
+  '("private"))
+(define test-omit-paths
+  '(#rx"\\.scrbl$"
+    #rx"info\\.rkt$"
+    #rx"util-doc\\.rkt$"))
